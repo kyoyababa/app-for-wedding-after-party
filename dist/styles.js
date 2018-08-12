@@ -539,7 +539,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/Apple/tabe-and-mari-wedding-app/tabe-wedding-app/src/styles.scss */"./src/styles.scss");
+module.exports = __webpack_require__(/*! /Users/Apple/tabe-and-mari-wedding-app/app-for-wedding-after-party/src/styles.scss */"./src/styles.scss");
 
 
 /***/ })

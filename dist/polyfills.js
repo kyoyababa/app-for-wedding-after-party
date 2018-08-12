@@ -5473,7 +5473,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/Apple/tabe-and-mari-wedding-app/tabe-wedding-app/src/polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! /Users/Apple/tabe-and-mari-wedding-app/app-for-wedding-after-party/src/polyfills.ts */"./src/polyfills.ts");
 
 
 /***/ })

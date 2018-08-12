@@ -585,7 +585,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/Apple/tabe-and-mari-wedding-app/tabe-wedding-app/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/Apple/tabe-and-mari-wedding-app/app-for-wedding-after-party/src/main.ts */"./src/main.ts");
 
 
 /***/ })
