@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { BackgroundImage, Teams, Awards } from './app.constants';
+import { IsControlInformationVisible, BackgroundImage, Teams, Awards } from './app.constants';
 import { OnBeforeunload } from './app.guards';
 
 export interface ITeam {
@@ -20,7 +20,7 @@ export interface IAward {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  backgroundImage: string = BackgroundImage;
+  backgroundImage = BackgroundImage;
   teams: Array<ITeam> = Teams;
   awards: Array<IAward> = Awards;
 
@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
   };
 
   displayMode: string;
-  isControlInformationVisible = true;
+  isControlInformationVisible = IsControlInformationVisible;
 
   constructor() {
     this.displayMode = this.states.Awards;
