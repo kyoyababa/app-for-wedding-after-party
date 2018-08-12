@@ -1,0 +1,45 @@
+<div class="child-component-wrapper">
+  <h2>points</h2>
+
+  <ol>
+    <li *ngFor="let p of points; let i = index;">
+      <dl>
+        <dt [ngClass]="currentPosition === i ? 'current' : ''">
+          Team<span>{{p.name}}</span>
+        </dt>
+        <dd [ngStyle]="{ width: p.point * 50 + 'px', 'background-color': p.color }">
+          <span>{{p.point}}</span>
+        </dd>
+      </dl>
+    </li>
+  </ol>
+
+  <aside *ngIf="isControlInformationVisible">
+    <ng-container *ngIf="!isKeyPressed">
+      <p>Press any key to activate cursor; Move to 'Awards' by press A.</p>
+    </ng-container>
+
+    <ng-container *ngIf="isKeyPressed">
+      <ul>
+        <li>
+          <dl>
+            <dt>Top Key</dt>
+            <dd>Move cursor to top</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>Bottom Key</dt>
+            <dd>Move cursor to bottom</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>Enter / Shift Key</dt>
+            <dd>Increase / Decrease point of current team</dd>
+          </dl>
+        </li>
+      </ul>
+    </ng-container>
+  </aside>
+</div>

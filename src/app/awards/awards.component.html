@@ -1,0 +1,56 @@
+<div class="child-component-wrapper">
+  <h2>Awards</h2>
+
+  <ol>
+    <li *ngFor="let a of awards; let i = index;">
+      <div
+        class="card-container"
+        [ngClass]="{ 'opened' : a.isOpened, 'current' : currentPosition === i }">
+
+        <span class="card">
+          <span class="front">
+            <i>{{i + 1}}</i>
+            <span [ngStyle]="{ 'background-image': 'url(' + a.imageUrl + ')' }">
+            </span>
+          </span>
+
+          <span
+            class="back"
+            [ngStyle]="{ 'background-image': 'url(' + a.imageUrl + ')' }">
+
+            <p>{{a.title}}</p>
+          </span>
+        </span>
+      </div>
+    </li>
+  </ol>
+
+  <aside *ngIf="isControlInformationVisible">
+    <ng-container *ngIf="!isKeyPressed">
+      <p>Press any key to activate cursor; Move to 'Points' by press D.</p>
+    </ng-container>
+
+    <ng-container *ngIf="isKeyPressed">
+      <ul>
+        <li>
+          <dl>
+            <dt>Right Key</dt>
+            <dd>Move cursor to right</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>Left Key</dt>
+            <dd>Move cursor to left</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>Enter Key</dt>
+            <dd>Toggle current panel</dd>
+          </dl>
+        </li>
+      </ul>
+    </ng-container>
+  </aside>
+</div>

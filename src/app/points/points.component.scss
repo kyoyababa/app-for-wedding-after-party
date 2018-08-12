@@ -1,0 +1,53 @@
+ol {
+  width: 1160px;
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+  background-color: rgba(white, 0.5);
+
+  > li {
+    padding: 10px 20px;
+    font-family: monospace;
+
+    + li {
+      border-top: 4px solid darkgray;
+    }
+
+    > dl {
+      display: flex;
+
+      > dt {
+        display: flex;
+        font-size: 50px;
+
+        &.current {
+          color: red;
+        }
+
+        > span {
+          margin-left: 10px;
+        }
+      }
+
+      > dd {
+        position: relative;
+        min-width: 10px;
+        height: 50px;
+        margin-top: 4px;
+        margin-left: 10px;
+        transition: width 300ms ease-out;
+
+        > span {
+          position: absolute;
+          top: 50%;
+          left: 100%;
+          margin-left: 0.5em;
+          font-style: italic;
+          font-size: 40px;
+          transform: translate(0, -50%);
+        }
+      }
+    }
+  }
+}

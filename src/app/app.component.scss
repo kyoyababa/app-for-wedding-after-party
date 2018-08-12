@@ -1,0 +1,65 @@
+.parent {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+.child {
+  height: 100%;
+  background-color: rgba(pink, 0.5);
+}
+
+::ng-deep {
+  .child-component-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    > h2 {
+      margin-top: -20px;
+      font-size: 80px;
+      line-height: 80px;
+      font-family: cursive;
+      text-align: center;
+      text-shadow: 0 4px 0 rgba(white, 0.5);
+      color: darkorange;
+      transform: scale(1.25, 1);
+    }
+  }
+
+  aside {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 0 0 6px white;
+
+    ul {
+      display: flex;
+
+      > li {
+        > dl {
+          display: flex;
+
+          > dt {
+            &:after {
+              content: ':';
+              margin-right: 0.25em;
+            }
+          }
+
+          > dd {
+            &:after {
+              content: ',';
+              margin-right: 0.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

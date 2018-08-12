@@ -1,0 +1,17 @@
+<div class="parent" [ngStyle]="{ 'background-image': 'url(' + backgroundImage + ')' }">
+  <div class="child"
+    *ngIf="displayMode === states.Awards">
+
+    <app-awards
+      [awards]="awards">
+    </app-awards>
+  </div>
+
+  <div class="child"
+    *ngIf="displayMode === states.Points">
+
+    <app-points
+      [points]="teams">
+    </app-points>
+  </div>
+</div>
